@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iliebing/trainingportal/issues"
   },
-  "homepage": "https://github.com/iliebing/trainingportal#readme"
+  "homepage": "https://github.com/iliebing/trainingportal#readme",
+  "dependencies": {
+    "contentful": "^6.1.1"
+  }
 }
