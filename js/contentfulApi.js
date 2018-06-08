@@ -20,9 +20,9 @@
     };
 
     const ROLE = {
-        default: 'Teilnehmer',
-        head: 'Führungskraft',
-        hr: 'Human Resources'
+        default: 'user',
+        head: 'leader',
+        hr: 'humanresources'
     };
 
     var client = contentful.createClient({

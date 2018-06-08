@@ -5,6 +5,7 @@
     var utils = globalNS.utils;
     var Post = globalNS.Post;
     var api_select = globalNS.contentfulApi.select;
+    var api_create = globalNS.contentfulApi.create;
 
     function hideElm (elm) {
         elm.style.display = 'none';
@@ -94,6 +95,19 @@
 
     function createPostFromForm(formHTML) {
 
+        var title = document.getElementById('title').value;
+        var date = document.getElementById('date').value;
+        var topic = document.getElementById('topic').value;
+        var decs = document.getElementById('description').value;
+
+        return new Post({
+            title: title,
+            // creatorId: this.creatorId,
+            date: date,
+            description: decs,
+            topic: topic,
+        });
+
     }
 
     // globalNS.contentfulApi.create.post(post.createEntry())
@@ -124,7 +138,17 @@
         });
 
         submitPostButton.addEventListener('click', function () {
-            hideElm(newPostInputoverlay)
+            hideElm(newPostInputoverlay);
+
+            var newPost = createPostFromForm(newPostForm);
+
+            api_create.post(newPost.createEntry())
+            .then(function () {
+                console.log('Post created', newPost)
+                displayPostsOderedBy(htmlList, 'topic');
+            })
+            .catch(console.warn)
+
         });
 
         closeOverLayButton.addEventListener('click', function () {
