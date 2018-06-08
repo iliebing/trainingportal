@@ -18,6 +18,7 @@
   "homepage": "https://github.com/iliebing/trainingportal#readme",
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "contentful": "^6.1.1"
+    "contentful": "^6.1.1",
+    "contentful-management": "^5.1.3"
   }
 }

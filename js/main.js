@@ -1,7 +1,33 @@
 (function (globalNS) {
 
- 'use strict';
+    'use strict';
 
-    globalNS.contentfulApi.getAllTrainings();
+    var Post = globalNS.Post;
 
-})(window.trainingPortal = (window.trainingPortal || {}));
+    function extract(key) {
+        return function (entry) {
+            return entry.fields[key]
+        }
+    }
+    
+
+    globalNS.contentfulApi.select.allUsers()
+        .then(function (res) {
+
+            console.log(res);
+            console.log(res.items.map(extract('name')));
+            
+
+            // var post = new Post(res.items[0]);
+            // console.log(post);
+             
+
+        })
+        .catch((err) => console.log('Err', err))
+
+
+
+
+
+
+})(window.trainingPortal = (window.trainingPortal || {}));  
