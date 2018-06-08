@@ -2,7 +2,7 @@
 
     'use strict';
 
-    globalNS.Post = class post {
+    globalNS.Post = class Post {
 
         constructor(obj) {
 
@@ -51,6 +51,5 @@
             };
         }
     }
-
 
 })(window.trainingPortal = (window.trainingPortal || {}));  
