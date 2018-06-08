@@ -54,6 +54,7 @@
     function createOptionForLead(item) {
         var option = document.createElement('option');
         option.innerText = item.fields.name;
+        option.value = item.sys.id;
         return option;
     }
 
