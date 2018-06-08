@@ -13,10 +13,10 @@
     <div class="wrapper container">
         <h1 class="mt-0">Trainingsportal</h1>
            <ul class="list-group">
-                <div class="container">        
+                <div class="container row">
                     <div input class="form-control rounded-5 py-3 form-group col-md-7" type="search" value="Suche" id="search-input">Suche
-                    </div>
-                    <button type="button" class="form-group col-md-5 btn btn-dark" id="add-post-btn">add new event</button>
+                    </div><span class="divide col-md-1"></span>
+                    <button type="button" class="form-group col-md-4 btn btn-dark" id="add-post-btn">+ add new event</button>
                 </div>
               <table class="table">
                 <thead>
@@ -41,6 +41,7 @@
 
     <div class="overlay">
         <div class="wrapper">
+            <a class="close">x</a>
             <div id="primary">
                 <form id="tpost-send">
                     <label for="title">Titel</label>
@@ -63,7 +64,6 @@
                 </form>
             </div>
             <div id="secondary"></div>
-            <a class="close">x</a>
         </div>
     </div>
     </div>

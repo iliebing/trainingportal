@@ -16,6 +16,7 @@
     background: #ffffff;
     padding: 2%;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .overlay form * {
