@@ -51,6 +51,12 @@
         return tr;
     }
 
+    function createOptionForLead(item) {
+        var option = document.createElement('option');
+        option.innerText = item.fields.name;
+        return option;
+    }
+
     function displayEntries(listElm, entries) {
         listElm.innerText = "";
         appendChildren(listElm, entries.map(createRowForPost));
@@ -126,9 +132,10 @@
         var addPostButton = document.getElementById('add-post-btn');
         var submitPostButton = document.getElementById('submit-post-btn');
         var newPostForm = document.getElementById('tpost-send');
-        var closeOverLayButton = newPostInputoverlay.querySelector('.close')
+        var closeOverLayButton = newPostInputoverlay.querySelector('.close');
+        var leaderSelect = document.getElementById('leaderSelect');
 
-        console.log(newPostForm);
+        console.log(leaderSelect);
         
 
         tableButtons.forEach(addListener('click', onTableheadClick(htmlList)));
@@ -144,7 +151,7 @@
 
             api_create.post(newPost.createEntry())
             .then(function () {
-                console.log('Post created', newPost)
+                console.log('Post created', )
                 displayPostsOderedBy(htmlList, 'topic');
             })
             .catch(console.warn)
@@ -158,6 +165,12 @@
         displayPostsOderedBy(htmlList, 'topic');
 
         hideElm(newPostInputoverlay);
+
+
+        api_select.allHeads()
+        .then(function (response) {
+            appendChildren(leaderSelect, response.items.map(createOptionForLead))
+        })
 
     });
 

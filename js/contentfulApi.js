@@ -97,7 +97,7 @@
                     resolve(newPost);
                 })
                 .catch(reject);
-        });
+        });         
     }
 
     function deletePost(id) {
@@ -164,7 +164,7 @@
             allUsers: prepareGetEntries({
                 content_type: TYPE.user
             }),
-            allDefaultUsers: prepareGetEntries({
+            allHeads: prepareGetEntries({
                 content_type: TYPE.user,
                 'fields.role': ROLE.head,
             }),
