@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Trainingsportal</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 
 <body>
@@ -36,7 +38,34 @@
                 </tbody>
               </table>
       </ul>
-      <div class="post-list"></div>
+
+    <div class="overlay">
+        <div class="wrapper">
+            <div id="primary">
+                <form action="" id="tpost-send">
+                    <label for="title">Titel</label>
+                    <input type="text" name="title" id="title" class="form-control" />
+                    <label for="topic">Thema</label>
+                    <input type="text" name="topic" id="topic" class="form-control" />
+                    <label>Datum</label>
+                    <input type="date" id="date" class="form-control" />
+                    <label for="">Dein Teamleiter</label>
+                    <select name="" id="" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <label>Beschreibung</label>
+                    <textarea name="description" id="" cols="30" rows="10"  class="form-control"></textarea>
+                    <button class="btn btn-primary">Abschicken</button>
+                </form>
+            </div>
+            <div id="secondary"></div>
+            <a class="close">x</a>
+        </div>
+    </div>
     </div>
 
     <script src="node_modules/contentful/dist/contentful.browser.min.js"></script>
