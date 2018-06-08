@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Trainingsportal</title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    </head>
-    <body>
 
-        <div class="wrapper container-fluid">
-            <h1 class="mt-0">Trainingsportal</h1>
-            <div class="post-list"></div>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Trainingsportal</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
 
-    </body>
+<body>
+
+    <div class="wrapper container-fluid">
+        <h1 class="mt-0">Trainingsportal</h1>
+        <div class="post-list"></div>
+    </div>
+
+    <script src="node_modules/contentful/dist/contentful.browser.min.js"></script>
+    <script src="node_modules/contentful-management/dist/contentful-management.browser.min.js"></script>
+
+    <script src="js/Models/Post.js"></script>
+    <script src="js/Models/User.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/contentfulApi.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
